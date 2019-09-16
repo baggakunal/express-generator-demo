@@ -7,11 +7,13 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/:id', function(req, res) {
+  console.log(`Headers sent? `, res.headersSent); // false
   if(req.params && req.params.id != null && !isNaN(Number(req.params.id))){
     res.send(`User ID is: ${req.params.id}`);
   } else {
     res.send('Invalid ID');
   }
+  console.log(`Headers sent? `, res.headersSent); // true
 });
 
 module.exports = router;
