@@ -22,6 +22,6 @@ router.route('/').all(function (req, res, next) {
   res.send('route matched');
 }).post(function (req, res, next) {
   res.send('\nroute matched, different verb\n');
-})
+});
 
 module.exports = router;
