@@ -1,0 +1,8 @@
+extends layout
+
+block content
+    h1= title
+    p Welcome to our site
+    ul
+        each val in ['This', 'is', 'a', 'list']
+            li= val

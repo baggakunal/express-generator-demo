@@ -14,4 +14,8 @@ router.get('/faq', function (req, res, next) {
   res.render('faq', { title: 'Frequently Asked Questions' });
 });
 
+router.get('/about', function (req, res, next) {
+  res.render('about', { title: 'About' });
+});
+
 module.exports = router;
